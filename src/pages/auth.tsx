@@ -21,7 +21,8 @@ const AuthPage: React.FC = () => {
         try {
             if (isLogin) {
             	const token = await login(email, password);
-                localStorage.setItem("token", token);
+                console.log(token.access_token)
+                localStorage.setItem("token", token.access_token);
                 router.push("/dashboard");
             } else {
             	const registerResponse = await register(name, email, password);

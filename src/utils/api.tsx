@@ -26,3 +26,13 @@ export const register = async (name: string, email: string, password: string) =>
         throw error.response?.data || "Registration failed.";
     }
 };
+
+export const fetchEmissionSourceType = async (token: string) => {
+    try {
+        console.log("token  your tokennn", token);
+        const response = await api.get("/emission-sources", { headers: {'Authorization': `Bearer ${token}`}});
+        return response.data;
+    } catch (error) {
+        throw error.response?.data || "Fetch emission sources failed.";
+    }
+}
