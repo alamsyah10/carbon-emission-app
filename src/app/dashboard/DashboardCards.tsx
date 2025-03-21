@@ -114,6 +114,7 @@ function TeamCards({className = ""}) {
         </article>    
     )
 }
+{/*
 function SalesCard({className=""}) {
     return (
         <article className={`p-6 bg-white rounded-3xl ${className}`}>
@@ -319,5 +320,5 @@ function RatingCircle({ percentage, label, color }: RatingCircleProps) {
         </div>
     );
 }
-
+*/}
 export default DashboardCards;
