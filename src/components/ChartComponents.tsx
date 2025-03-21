@@ -19,6 +19,7 @@ export interface SupplyChainCarbonFootprintData {
     "Scope 2": number;
     "Scope 3": number;
     "Total": number;
+    "Spends": string;
 }
 
 export interface SupplyChainBarChartComponentProps {
@@ -33,6 +34,8 @@ export const SupplyChainBarChartComponent: React.FC<SupplyChainBarChartComponent
             <Tooltip content={({ payload }) => {
                 if (!payload || payload.length === 0) return null;
                 const total = payload[0] ? payload[0].payload["Total"] : 0;
+                const spends = payload[0] ? payload[0].payload["Spends"] : 0;
+                console.log("spends", spends);
                 return (
                     <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
                         <h4 className="text-xl font-semibold text-gray-800 mb-3">Carbon Footprint Details</h4>
@@ -53,6 +56,10 @@ export const SupplyChainBarChartComponent: React.FC<SupplyChainBarChartComponent
                                 <div className="flex justify-between">
                                     <span className="text-gray-600 font-medium">Total</span>
                                     <span className="text-gray-800 font-semibold">{total} tCO2e</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span className="text-gray-600 font-medium">Spends</span>
+                                    <span className="text-gray-800 font-semibold">{spends}</span>
                                 </div>
                             </div>
                         </div>
