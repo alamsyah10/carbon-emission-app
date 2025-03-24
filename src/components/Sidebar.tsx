@@ -9,15 +9,16 @@ function Sidebar() {
                 <NavItem to="/dashboard" icon="dashboard" label="Home" />
                 <NavItem to="/carbon-input" icon="shopping-cart" label="Carbon Input" />
                 <NavItem to="/supply-chain" icon="menu-2" label="Supply Chain" />
-                <NavItem to="/customer-review" icon="message-circle" label="Waste" />
-                <NavItem to="/customer-review" icon="message-circle" label="Travel" />
-                <NavItem to="/customer-review" icon="message-circle" label="Other Emission" />
+                <NavItem to="/travel" icon="message-circle" label="Travel" />
+                <NavItem to="/delivery" icon="message-circle" label="Deliveries" />
+                <NavItem to="/waste" icon="message-circle" label="Waste" />
+                <NavItem to="/others" icon="message-circle" label="Other Emission" />
 
                 <div className="mt-5 mb-2.5 text-xs text-slate-400">OTHERS</div>
 
-                <NavItem to="/settings" icon="settings" label="Targets" />
-                <NavItem to="/payment" icon="credit-card" label="Report" />
-                <NavItem to="/accounts" icon="users" label="Certified" />
+                <NavItem to="/targets" icon="settings" label="Targets" />
+                <NavItem to="/report" icon="credit-card" label="Report" />
+                <NavItem to="/Certified" icon="users" label="Certified" />
                 <NavItem to="/help" icon="help" label="Help" />
             </div>
         </nav>

@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export interface SupplierSpreadsheetItemProps {
     site: string;
     supplier: string;
@@ -16,7 +18,6 @@ export interface SupplierSpreadsheetProps {
 export function SupplierSpreadsheet ({className="", items}: SupplierSpreadsheetProps) {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const len = items[0].data.length;
-    console.log("len", len);
     return (
         <article className={`p-6 bg-white rounded-3xl ${className}`}>
             <h3 className="text-2xl font-semibold">Supplier Information</h3>
